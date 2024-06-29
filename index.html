@@ -1,160 +1,190 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 <!DOCTYPE html>
-<html lang ="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
-        <style>
-            p{
-                text-indent: 20px;
-            }
+<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
-            .img{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
 
-            .content{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-left: 15%;
-                padding-right: 15%;
-            }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan's - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" 
+  rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
+  crossorigin="anonymous">  <link rel="stylesheet" href="css/styles.css">
 
-            .certContent{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-left: 15%;
-                padding-right: 15%;          
-            }
+  <style>
 
-        </style>
-        <title>Jonnii</title>
-    </head>
-    <body>
-        <h1>Jonni's Portfolio</h1>
-        <h2>I'm a Tripple Stack Engineer</h2>
-        <ul>
-            <li>Mechanical</li>
-            <li>Electrical</li>
-            <li>Software</li>
+
+
+  </style>
+
+
+
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black">
+    <a class="navbar-brand" href="#">Jonathan</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#downloads">Downloads</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="container text-center py-5" style="background-image: url('./assets/images/banner.png'); background-size: cover; color: white;">
+    <h1 class="display-4" >Jonathan</h1>
+    <p class="lead">Data Scientist | Computer Engineer | 3D Designer</p>
+  </header>
+
+  <section id="about" class="container my-5">
+    <h2>About Me</h2>
+    <p>  Embarking on a journey as an aspiring computer engineer, my passion converges on the intricate landscape of 
+      RF Mixed Signal CMOS RTL Design. As a Neuro-Divergent individual, my approach to my interests mirrors a vertically 
+      integrated chain, allowing me to cultivate a diverse and comprehensive skill set. My ability to think across 
+      disciplines has proven invaluable, enabling me to tackle business challenges with a multidisciplinary perspective. 
+      At the core of my being, I find immense joy in the process of creation and building. An inventor at heart, 
+      I thrive on innovation – if the tools needed for a job are lacking, my instinct is to invent them.</p>
+  </section>
+
+  <section id="projects" class="container my-5">
+    <h2>Projects</h2>
+    <div class="row">
+      <!-- Software Development -->
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Inductor Frequency Sweep Modulator</h5>
+            <p class="card-text">Simulation and data visualization of an inductor frequency sweep modulator.</p>
+            <a href="link-to-download" class="btn btn-primary">Download</a>
+          </div>
+        </div>
+      </div>
+      <!-- Hardware Products -->
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Docking Station for MacBook</h5>
+            <p class="card-text">High-quality docking station for MacBook.</p>
+            <a href="link-to-purchase" class="btn btn-primary">Purchase</a>
+          </div>
+        </div>
+      </div>
+      <!-- Research Papers -->
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Quantum Field Desynchronization</h5>
+            <p class="card-text">In this paper, we investigate the theoretical framework of quantum field desynchronization and its implications for particle creation and cosmological phenomena. 
+              Utilizing the Klein-Gordon equation and simulations, we explore the dynamics of energy release within quantum fields, examining the potential parallels with early universe 
+              inflationary models. Our findings suggest that rapid desynchronization leads to observable effects such as particle-antiparticle pair creation and gravitational wave-like 
+              disturbances, offering new insights into fundamental physics and potential technological applications</p>
+            <a href="link-to-paper" class="btn btn-primary">Read Full Paper</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container my-5">
+    <h2>Skills</h2>
+    <ul>
+      <li>Data Science</li>
+      <li>Embedded Development & Implimentation</li>
+
+      <li>Computer Aided & 3D Drafting  </li>
+      <li>Web Development & Software Applications</li>
+    </ul>
+  </section>
+
+  <section id="experience" class="container my-5">
+    <h2>Experience</h2>
+
+
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Systems Engineering Test Technician</h5>
+        <h6 class="card-subtitle mb-2 text-muted">DCX CHOL ENTERPRISE</h6>
+        <p class="card-text">
+          <ul>
+            <li>
+              Designed, tested, and modified electronics and electromechanical systems.
+            </li>
+            <li>
+              Operated a range of developmental and diagnostic equipment, including oscilloscopes and signal generators.
+            </li>
         </ul>
-        <hr>
-
-        <h3><a href="./assets/images/untitled/3dDock.html">Minimalist Docking Station V1</a></h3>
-        <div class="img">
-            <a href="./assets/images/untitled/3dDock.html"><img src="./assets/images/dock.png" width = 200 alt="minimalist laptop stand"/><br>3D view</a>
-        </div>
-        <div class="content">
-            <p>The Minimalist Docking station was designed for the apple M series Macbook pro, both 14" and 16".
-                It's small quare footprint & sturdy sleek design makes it a great desktop essential. Great space savings
-                and adds a bit of personal touch to your own custome desk setup. Made from 100% recycled PLA. Order yours today through the "Contact Me" link.
-            </p>
-        </div>
-
-        <hr>
-    
-        <h3>Protolink Connector V2 (Design Phase)</h3>
-        <div class="img">
-            <a href=""><img src="./assets/connector.png" width = 400 alt="electrical connector"/></a>
-        </div>
-        
-        <div class="content">
-            <p>
-                The Protolink  Connector is a 3D printed connector standard aimed at consolodating GPIO and power needs in prototyping and testing solutions.
-                The connector provides ease of use and static configuration and standardization to the small scale prototyping, testing, or DIY project scale. 
-                Virtual and Physical products available for purchase. Order yours through the "contact me" page.
-            </p>
-        </div>
-
-        <hr>
-        <h3>Smart MCU (Design Phase)</h3>
-        <div class="img">
-            <a href=""><img src="./assets/images/mcu.png" width = 600 alt="electrical schematic"/></a>
-        </div>
-        
-        <div class="content">
-            <p>The Smart MCU is a configurable hardware stand alone micro controller that comes with preloaded packages for various projects. 
-                The modular design and multiple modes allows for quick product design workflow. Unit can be configured as a controller, a tester, and emulator. 
-                Book a consultation through the "Contact Me" link.
-            </p>
-        </div>
-
-        <hr>
-        <h3>Pulse Generator V1 (OTJ Project)</h3>
-        <div class="img">
-            <a href=""><img src="./assets/images/pulseGen.JPG" width = 600 alt="electrical schematic"/></a>
-        </div>
-        
-        <div class="content">
-            <p>The Pulse Gnerator was a complete custome design and prototype test bench which featured carbon fiber 3D printed box and custome wire wrap. 
-                The test unit also featured a digital contol io that allowed for data aquaistion and interface with its own desktop labview application. 
-                The reason for the development of this generator is because the required pulse with, amperage, and accuracy was nat available with off 
-                the shelf test equipment in the budget for this project. (This iteration was not used in production)
-            </p>
-        </div>
-        
-
-        <hr>
-        <h3><a href="./public/birthday.html">Digital Invite</a></h3>
-        <div class="img">
-            <img src="./assets/images/birthday.png" height = 600>
-        </div>
-        
-        <div class="content">
-            <p>
-                This Digital Invite is a culmination of of my curent web design skills. Basic small business website consultations available throught 
-                the "Contact Me" link for Various small scale solutions.
-            </p>
-        </div>
-        <hr>
-        <h3><a href="https://github.com/JonniiRingo">GitHub</a></h3>
-        <div class="img">
-            <img src="./assets/images/github.png" width = 400 alt="github link">
-        </div>
-        
-        <div class="content">
-            <p>
-                For a detailed view of my overall computer science journey please visit my GitHub. It's also as diverse as my portfolio. 
-                Projects range from verilog to python projects of various levels of completion. I hope you will enjoy the variety on my GitHub. 
-                Click the link above to be redirected to my GitHub profile.
-            </p>
-        </div>
-        <hr>
-            <h3><a href="11.2 Bootstrap Components"> Small Business Website</a></h3>
-            <div class="img">
-                <img class="web" src="./assets/images/SmallBusiness.png" width="400">
-            </div>      
-        <div class="content">     
-             <p>
-                Experience the sophistication of MoveIt.com, a testament to the power of CSS and Bootstrap in creating polished and functional websites. 
-                This platform reflects my journey in web development, showcasing a clean and responsive design tailored for optimal user experience. As a web 
-                developer committed to precision and professionalism, MoveIt.com is a glimpse into my expertise in crafting seamless digital solutions. 
-                Explore the site to witness the synergy of design and functionality, a true representation of my skills as a dedicated developer. 
-            </p>
-        </div>
-
-        <hr>
-        <h3><a href="./certs.html">Certifications</a></h3>
-        <div class="img">
-            <img src="./assets/cert-placeholder.png" width = 400 alt="github link">
-        </div>
-
-        <div class="content">     
-            <p>
-                Here are some of my acomplishments and certifications. Feel free to take a look.
-           </p>
-       </div> 
-        <hr>
+        </p>
+      </div>
+    </div>
 
 
-        <a href="./public/about.html">About Me</a> <br>
-        <a href="./public/ContactMe.html">Contact Me</a>
-        <br>
-    </body>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Electromechanical Technician B</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Marvin Group</h6>
+        <p class="card-text">
+          <ul>
+            <li>
+              Generated 3D models and electrical schematics using CATIA & Altium Designer.
+            </li>
+            <li>
+              Conducted electromechanical assembly and implemented test fixtures for manufacturing.
+            </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="container my-5">
+    <h2>Services</h2>
+    <hr>
+    <ul>
+      <li>3D Design & Drafting</li>
+      <p>Bringing your idea to life from concept to prototype</p>
+      <li>Web Design Services</li>
+      <p>Creating mid sized software and functional websites with personal features that matter to you</p>
+  </ul>
+    <h5></h5>
+  </section>
+
+  <section id="downloads" class="container my-5">
+    <h2>Downloads</h2>
+    <p>Links to downloadable content such as Electron apps and design files.</p>
+  </section>
+
+  <section id="contact" class="container my-5">
+    <h2>Contact</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Your Email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    <div class="social-links mt-4">
+      <a href="https://www.linkedin.com/in/jonathan-samuels-23a3382b3?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJgZ7pQVUSZOTM%2B6rRtNPDg%3D%3D" class="btn btn-outline-primary">LinkedIn</a>
+      <a href="https://github.com/JonniiRingo" class="btn btn-outline-primary">GitHub</a>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
 </html>
-
-
