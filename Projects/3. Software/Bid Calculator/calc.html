@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Bid Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <h1>Job Bid Calculator</h1>
+    <form id="bidForm">
+        <label for="square_ft">How many square feet is the job? :</label>
+        <input type="number" id="square_ft" name="square_ft" required><br><br>
+
+        <label for="number_wrkrs">How many workers assigned to this job? :</label>
+        <input type="number" id="number_wrkrs" name="number_wrkrs" required><br><br>
+
+        <label for="distance">How far is the job? : Miles</label>
+        <input type="number" id="distance" name="distance" required><br><br>
+
+        <label for="additional_sqrft">What is the additional cost per site preparation? :</label>
+        <input type="number" id="additional_sqrft" name="additional_sqrft"><br><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <h2>Results:</h2>
+    <p id="num_days"></p>
+    <p id="bid_price"></p>
+    <p id="price_per_sqft"></p>
+    <p id="grand_total"></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="calc.js"></script>
+</body>
+</html>
