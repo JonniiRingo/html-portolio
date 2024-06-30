@@ -1,5 +1,5 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
+import express from "express";
+import nodemailer from "nodemailer";
 
 const app = express();
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -28,7 +28,7 @@ app.post('/submit-form', (req, res) => {
             res.send('error');
         } else {
             console.log('Email sent: ' + info.response);
-            res.send('success');
+            res.sendFile("index.html");
         }
     });
 });
