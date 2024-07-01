@@ -189,20 +189,20 @@
   <section id="contact" class="container my-5">
     <h2>Contact</h2>
     <form action="https://formspree.io/f/xzzpbzae" method="POST">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-        </div>
-        <!-- NOTE! add padding to send button -->
-        <button type="submit" class="btn btn-primary">Send</button>
+      <input type="hidden" name="_redirect" value="index.html#contact">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send</button>
     </form>
 
 
