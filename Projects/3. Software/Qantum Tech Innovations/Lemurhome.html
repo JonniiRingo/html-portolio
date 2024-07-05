@@ -1,148 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemur ALN Model | Quantum Tech Innovations</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #fff;
-            color: #000;
-            font-family: 'Arial', sans-serif;
-        }
-        .navbar {
-            background-color: #f8f9fa;
-        }
-        .navbar-brand img {
-            max-width: 50px;
-        }
-        .hero-section {
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .hero-section h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero-section p {
-            font-size: 1.5rem;
-        }
-        .section-title {
-            margin: 60px 0 20px;
-            text-align: center;
-            font-size: 2rem;
-        }
-        .icon-box {
-            text-align: center;
-            padding: 20px;
-        }
-        .icon-box i {
-            font-size: 4rem;
-            color: #00aaff;
-        }
-        .footer {
-            background-color: #f8f9fa;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 40px;
-        }
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .content-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .content-section p {
-            text-align: left;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Tech Innovations</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/mnt/data/openart-image_CLip_YEm_1720115204425_raw.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+      width: 100vw; /* Ensures it takes up the full viewport width */
+      overflow: hidden;
+    }
+    .btn-primary {
+      background-color: #fff;
+      color: #333;
+      border: none;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #e0e0e0;
+    }
+    .features-section, .about-section {
+      padding: 80px 0;
+    }
+    .features-section {
+      background-color: #f9f9f9;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+    }
+    .footer-links a, .footer-social a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 1.2rem;
+    }
+    .footer-social i {
+      transition: color 0.3s ease;
+    }
+    .footer-social a:hover i {
+      color: #ddd;
+    }
+    .navbar {
+      background-color: #333;
+    }
+    .navbar .nav-link {
+      color: #fff;
+    }
+    .backdropText {
+      background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+      color: #fff; /* White text */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .container {
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="/path/to/Quantum Tech Innovations.jpg" alt="Quantum Tech Innovations Logo"> Quantum Tech Innovations</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <header class="container text-center py-5" style="background-image: url('../../../assets/images/LemurHero.png'); background-size: cover; color: black; height: 250px;">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#use-cases">Use Cases</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </header>
-            </div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">
+    <img src="../../../assets/images/QTIlogo.png" alt="Logo" style="height:40px;"> <!-- Adjust height as needed -->
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#features">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#about">About</a>
+      </li>
+      <!-- Add more navigation items here -->
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="container text-center py-5" style="background-image: url('../../../assets/images/Lemur.jpg'); 
+background-size: cover; color: black; height: 1000px;">
+  <div class="container">
+    <div class="backdropText">
+      <h1>Quantum Tech Innovations</h1>
+      <p>Revolutionizing the Future with Cutting-Edge Technology</p>
+      <a href="Lemur Model/app.html" class="btn btn-primary">Chat With Lemur</a>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container text-center">
+    <h2>About Us</h2>
+    <p>
+        Quantum Tech Innovations is a leading provider of AI solutions, specializing in custom AI development, research, and consultancy 
+        services. Our team of experts combines deep technical expertise with a passion for innovation to deliver exceptional results for our clients.
+    </p>
+</section>
+
+
+<section id="about" class="about-section">
+    <div class="container text-center">
+      <h2>Custom AI Solutions</h2>
+      <p>
+        Transform your business with our custom AI solutions tailored to your specific needs. Whether you're looking to 
+        automate processes, improve decision-making, or enhance customer experiences, we have the expertise to deliver 
+        impactful AI solutions that drive results.
+      </p>
+  </section>
+
+  <!-- Features Section -->
+<section id="features" class="features-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-brain fa-3x mb-4"></i>
+          <h2>Advanced AI</h2>
+          <p>State-of-the-art AI solutions to enhance decision-making and productivity.</p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-                <h1>Welcome to Lemur ALN Model</h1>
-                <p>Experience the power of cutting-edge AI technology.</p>
+        <div class="col-md-4">
+          <i class="fas fa-robot fa-3x mb-4"></i>
+          <h2>Robotics</h2>
+          <p>Innovative robotics to automate and optimize your operations.</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="content-section">
-            <h2 class="section-title">About the Lemur ALN Model</h2>
-            <p>The Lemur ALN model is designed to provide advanced learning capabilities, adaptability, and unparalleled performance. Our mission is to revolutionize industries and empower businesses to thrive in the digital age with the help of AI.</p>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="content-section">
-        <h2 class="section-title">Features</h2>
-        <div class="row">
-            <div class="col-md-4 icon-box">
-                <i class="bi bi-brain"></i>
-                <h3>Deep Learning Algorithms</h3>
-                <p>Advanced algorithms for comprehensive data analysis and insights.</p>
-            </div>
-            <div class="col-md-4 icon-box">
-                <i class="bi bi-speedometer"></i>
-                <h3>Real-Time Data Processing</h3>
-                <p>Process data in real-time for immediate results and decisions.</p>
-            </div>
-            <div class="col-md-4 icon-box">
-                <i class="bi bi-arrows-fullscreen"></i>
-                <h3>Scalability</h3>
-                <p>Easily scalable to meet the growing demands of your business.</p>
-            </div>
+        <div class="col-md-4">
+          <i class="fas fa-network-wired fa-3x mb-4"></i>
+          <h2>IoT Integration</h2>
+          <p>Seamless integration of IoT devices for smarter environments.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+  
 
-    <!-- Use Cases Section -->
-    <section id="use-cases" class="content-section">
-        <h2 class="section-title">Use Cases</h2>
-        <p>The Lemur ALN model has been successfully deployed in various industries, solving complex problems and driving business outcomes. Explore our case studies to see how our model can benefit your business.</p>
-    </section>
+  <section id="about" class="about-section">
+    <div class="container text-center">
+      <h2>AI Research</h2>
+      <p>
+        Stay at the forefront of AI innovation with our cutting-edge research initiatives. Our team is constantly exploring 
+        new technologies, algorithms, and methodologies to advance the field of artificial intelligence. From deep learning 
+        and natural language processing to reinforcement learning and computer vision, we're pushing the boundaries of what's 
+        possible with AI.
+      </p>
+  </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="content-section">
-        <h2 class="section-title">Benefits</h2>
-        <p>Using the Lemur ALN model can improve decision-making, enhance productivity, and generate cost savings. Our AI model is designed to add significant value to businesses across various sectors.</p>
-    </section>
+  <section id="about" class="about-section">
+    <div class="container text-center">
+      <h2>AI Research</h2>
+      <p>
+        Experience the power of AI firsthand with our interactive AI models. Explore different use cases, experiment with AI 
+        algorithms, and see how AI can transform your business. Sign up for a free trial today and unleash the potential of AI 
+        for your organization.
+      </p>
+  </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Quantum Tech Innovations. All rights reserved.</p>
-            <p><a href="#contact">Contact Us</a> | <a href="#privacy">Privacy Policy</a></p>
+  <section id="about" class="about-section">
+    <div class="container text-center">
+      <h2>Research Digest</h2>
+      <p>
+        Stay informed about the latest developments in AI research with our curated research digest. Explore articles, 
+        papers, and insights from leading researchers and practitioners in the field of artificial intelligence. From 
+        breakthroughs in machine learning to emerging trends in AI ethics, our research digest covers it all.
+      </p>
+  </section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Quantum Tech Innovations</h2>
+      </div>
+      <div class="col-md-4 text-center">
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
         </div>
-    </footer>
+      </div>
+      <div class="col-md-4 text-right">
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
