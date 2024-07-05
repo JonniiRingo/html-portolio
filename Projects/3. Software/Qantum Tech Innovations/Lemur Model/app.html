@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyberpunk Chat</title>
     <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+        a#send-button {
+        text-decoration: none;
+        display: inline-block;
+        padding: 8px 16px;
+        border: none;
+        background-color: #008CBA; /* Change to your preferred color */
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+}
+
+a#send-button:hover {
+    background-color: #007B9A; /* Change to your preferred hover color */
+}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -27,7 +46,7 @@
             </div>
             <div class="chat-input">
                 <input type="text" id="chat-input" placeholder="Type your message here...">
-                <button id="send-button" href="blank.html">Send</button>
+                <a id="send-button" href="commingSoon.html" role="button">Send</a>
             </div>
         </main>
     </div>
