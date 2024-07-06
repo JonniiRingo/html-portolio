@@ -28,17 +28,18 @@ app.post('/api/transformer', (req, res) => {
 
 
 
-
+app.listen(3000, () => console.log('Server running on port 3000'));
 
 const getTransformedText = async (inputText) => {
-    try {
-      const response = await axios.post('/api/transformer', { inputText });
-      return response.data;
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  try {
+    const response = await axios.post('http://localhost:3000/api/transformer', { inputText });
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-
-
-app.listen(3000, () => console.log('Server running on port 3000'));
+// Use the function for testing
+getTransformedText('your input text').then(transformedText => {
+  console.log(transformedText);
+});
