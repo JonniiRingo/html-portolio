@@ -1,6 +1,7 @@
 import express from 'express';
 import axios from 'axios';
 import { spawn } from 'child_process';
+import mongodb from 'mongodb';
 
 
 
@@ -43,3 +44,7 @@ const getTransformedText = async (inputText) => {
 getTransformedText('your input text').then(transformedText => {
   console.log(transformedText);
 });
+
+
+// Next step is to integrat mongodb into the server application.  
+// Mongodb package is already installed and all you have to do is include the library and the functions into the existing server application
