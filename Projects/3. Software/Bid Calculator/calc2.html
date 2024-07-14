@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Flooring Installation Bid Calculator</title>
+    <link rel="stylesheet" href="calc2.css">
+</head>
+<body>
+    <header>
+        <h1>Tile Flooring Installation Bid Calculator</h1>
+        <p>Calculate your tile flooring installation cost easily.</p>
+    </header>
+
+    <main>
+        <form id="bidCalculator">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="step active">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+                <div class="step">4</div>
+            </div>
+
+            <!-- Step 1: Project Details -->
+            <div class="form-step active">
+                <h2>Project Details</h2>
+                <label for="customerName">Customer Name</label>
+                <input type="text" id="customerName" name="customerName" required>
+                <label for="contactInfo">Contact Information</label>
+                <input type="text" id="contactInfo" name="contactInfo" required>
+                <label for="projectAddress">Project Address</label>
+                <input type="text" id="projectAddress" name="projectAddress" required>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 2: Area Measurement -->
+            <div class="form-step">
+                <h2>Area Measurement</h2>
+                <label for="length">Length (ft)</label>
+                <input type="number" id="length" name="length" required>
+                <label for="width">Width (ft)</label>
+                <input type="number" id="width" name="width" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 3: Material Selection -->
+            <div class="form-step">
+                <h2>Material Selection</h2>
+                <label for="tileType">Tile Type</label>
+                <select id="tileType" name="tileType" required>
+                    <option value="ceramic">Ceramic</option>
+                    <option value="porcelain">Porcelain</option>
+                    <option value="stone">Stone</option>
+                </select>
+                <label for="tileSize">Tile Size</label>
+                <select id="tileSize" name="tileSize" required>
+                    <option value="12x12">12"x12"</option>
+                    <option value="18x18">18"x18"</option>
+                    <option value="24x24">24"x24"</option>
+                </select>
+                <label for="tilePattern">Tile Pattern</label>
+                <select id="tilePattern" name="tilePattern" required>
+                    <option value="straight">Straight</option>
+                    <option value="diagonal">Diagonal</option>
+                    <option value="herringbone">Herringbone</option>
+                </select>
+                <label for="tileImage">Upload Tile Sample</label>
+                <input type="file" id="tileImage" name="tileImage">
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Step 4: Additional Costs -->
+            <div class="form-step">
+                <h2>Additional Costs</h2>
+                <label for="additionalCosts">Additional Costs (e.g., removal, prep work)</label>
+                <input type="number" id="additionalCosts" name="additionalCosts">
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit">Calculate</button>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        // JavaScript to handle form steps
+        const steps = document.querySelectorAll('.form-step');
+        const nextBtns = document.querySelectorAll('.next-btn');
+        const prevBtns = document.querySelectorAll('.prev-btn');
+        const progressBar = document.querySelector('.progress-bar');
+
+        let currentStep = 0;
+
+        nextBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                steps[currentStep].classList.remove('active');
+                progressBar.children[currentStep].classList.remove('active');
+                currentStep++;
+                steps[currentStep].classList.add('active');
+                progressBar.children[currentStep].classList.add('active');
+            });
+        });
+
+        prevBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                steps[currentStep].classList.remove('active');
+                progressBar.children[currentStep].classList.remove('active');
+                currentStep--;
+                steps[currentStep].classList.add('active');
+                progressBar.children[currentStep].classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
