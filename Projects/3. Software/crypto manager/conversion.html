@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Address Manager - Conversion & Withdrawal</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Convert and Withdraw</h2>
+        <form id="conversionForm">
+            <div class="mb-3">
+                <label for="amountToConvert" class="form-label">Amount to Convert (BTC)</label>
+                <input type="number" class="form-control" id="amountToConvert" step="0.00000001" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Convert to USD</button>
+        </form>
+        <div class="mt-3">
+            <h4>Withdraw Funds</h4>
+            <form id="withdrawalForm">
+                <div class="mb-3">
+                    <label for="withdrawAmount" class="form-label">Amount (USD)</label>
+                    <input type="number" class="form-control" id="withdrawAmount" step="0.01" required>
+                </div>
+                <div class="mb-3">
+                    <label for="bankAccount" class="form-label">Bank Account</label>
+                    <input type="text" class="form-control" id="bankAccount" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Withdraw</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
