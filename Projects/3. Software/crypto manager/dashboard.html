@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Address Manager - Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Dashboard</h2>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Balance</h5>
+                <p class="card-text" id="balance">0 BTC</p>
+                <p class="card-text" id="fiat-balance">$0 USD</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Recent Transactions</h5>
+                <ul class="list-group" id="transaction-history">
+                    <!-- Transaction items will be dynamically inserted here -->
+                </ul>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Accumulated Fees</h5>
+                <p class="card-text" id="accumulated-fees">0 BTC</p>
+                <p class="card-text" id="accumulated-fees-fiat">$0 USD</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
