@@ -8,19 +8,19 @@ const port = 3000
 const app = express();
 
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
 
 });
 
-app.post("/", (req, res) => {
+app.post("/", async (req, res) => {
 
 });
 
-app.patch("/", (req, res) => {
+app.patch("/", async (req, res) => {
 
 });
 
-app.delete("/", (req, res) => {
+app.delete("/", async (req, res) => {
 
 });
 
