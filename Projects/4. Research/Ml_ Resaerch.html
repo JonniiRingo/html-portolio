@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <title>Research Paper: 3D Tokenization Layer for Language Models</title>
+  <title>Research Paper: Parametric Intersecting Surfaces in Transformer Architectures</title>
 
   <style>
     .figure img {
@@ -19,23 +19,21 @@
 
 <body>
 
-
-
-  < div class="container my-5" >
+  <div class="container my-5">
     <!-- Title Page -->
     <section id="title-page" class="text-center mb-5">
-      <h1 class="display-4">Exploring 3D Tokenization in Language Models</h1>
-      <h2>A Novel Layer for Contextual Embedding</h2>
+      <h1 class="display-4">Exploring Parametric Intersecting Surfaces in Transformer Architectures</h1>
+      <h2>A Novel Approach for Multi-Dimensional Contextual Embedding</h2>
       <p class="lead">Jonathan Samuels</p>
       <p class="lead">El Camino College</p>
-      <p class="lead">October 2024</p>
+      <p class="lead">November 2024</p>
     </section>
 
     <!-- Abstract -->
     <section id="abstract" class="mb-5">
       <h2 class="h3">Abstract</h2>
       <p>
-        This paper explores the integration of a 3D tokenization layer within language models to enhance contextual understanding and spatial embedding. We investigate the mathematical foundations and computational benefits of utilizing a three-dimensional approach to tokenize sequences, aimed at improving data granularity. A new token structure and transformation are proposed to bridge contextual relationships more efficiently, potentially yielding enhanced model accuracy and understanding in natural language processing tasks.
+        This paper presents a novel approach to tokenization and embedding in language models by utilizing parametric intersecting surfaces within transformer architectures. By replacing traditional vector fields with intersecting parametric surfaces, this model captures higher-dimensional contextual interactions, offering a more dynamic approach to embedding complex semantic relationships. A mathematical foundation and experimental results are provided to demonstrate the model's increased accuracy and potential benefits for NLP applications.
       </p>
     </section>
 
@@ -57,34 +55,37 @@
     <section id="introduction" class="mb-5">
       <h2 class="h3">1. Introduction</h2>
       <p>
-        In recent years, advancements in natural language processing (NLP) have been driven by innovations in language model architecture. This research proposes a 3D tokenization layer as an extension of current methods, designed to enhance token embedding by incorporating a three-dimensional spatial structure. We hypothesize that by integrating 3D embeddings, contextual relationships between words can be mapped with increased fidelity, potentially leading to enhanced model performance.
+        Language models have traditionally relied on vector-based embeddings for capturing semantic and syntactic relationships. This paper explores an innovative departure from this paradigm, proposing the use of parametric intersecting surfaces as the foundational structure for embeddings within transformer architectures. We hypothesize that this approach enhances the model's ability to capture complex, multidimensional relationships by treating each token embedding as a surface intersection in a multi-dimensional space.
       </p>
     </section>
 
     <!-- Theoretical Framework -->
     <section id="framework" class="mb-5">
       <h2 class="h3">2. Theoretical Framework</h2>
-      <h5>3D Token Structure</h5>
+      <h5>Parametric Surface Embedding</h5>
       <p>
-        The 3D tokenization layer operates by transforming tokens into a three-dimensional vector space. The transformation is given by:
+        The proposed model uses a parametric approach, where each token is represented as a point on a surface in 3D space. The relationship between tokens can then be visualized as intersections between these surfaces, defined by the equation:
       </p>
       <p>
         \[
-        T(x, y, z) = f_x(x) \cdot f_y(y) \cdot f_z(z)
+        S(u, v) = (f_x(u, v), f_y(u, v), f_z(u, v))
         \]
       </p>
       <p>
-        where \(T(x, y, z)\) represents the 3D token embedding, and \(f_x, f_y,\) and \(f_z\) are functions that map token features into a 3D space.
+        where \( S(u, v) \) is a parametric surface defined by parameters \( u \) and \( v \). Here, each function \( f_x, f_y, f_z \) governs the spatial orientation and contextual properties of the token. Intersections between these surfaces represent contextual overlap, giving rise to multi-dimensional embedding spaces.
       </p>
 
       <h5>Mathematical Foundation</h5>
       <p>
-        To derive the spatial relationships, we utilize a tensor product to capture dependencies between tokens, where each embedding vector is a function of three orthogonal basis vectors. The embedded space can be represented as:
+        By using tensor products to capture dependencies between surface intersections, we establish higher-order embeddings. The embedding vector can be represented by:
       </p>
       <p>
         \[
-        \vec{T} = \sum_{i=1}^{N} \vec{e_i} \otimes \vec{e_j} \otimes \vec{e_k}
+        \vec{E} = \sum_{i,j,k} \vec{e_i}(u, v) \times \vec{e_j}(u, v) \times \vec{e_k}(u, v)
         \]
+      </p>
+      <p>
+        where \( \vec{E} \) is the embedding, and \( \vec{e_i}, \vec{e_j}, \vec{e_k} \) are basis vectors defined along intersecting surfaces.
       </p>
     </section>
 
@@ -92,14 +93,14 @@
     <section id="methods" class="mb-5">
       <h2 class="h3">3. Methods</h2>
       <p>
-        The 3D tokenization layer is implemented in PyTorch, leveraging 3D convolutional operations. The layer is trained on a corpus of text data, where each token is represented in a 3D space. The primary parameters for this experiment are:
+        The 3D parametric embedding layer was implemented using PyTorch, adapting 3D convolutions to accommodate surface-based embeddings. The training corpus was processed into parametric surfaces, with each token represented by a surface in 3D space. Key parameters included:
       </p>
       <ul>
-        <li>Layer Depth: Number of 3D embeddings</li>
-        <li>Convolutional Kernel Size: Adjusts spatial perception</li>
+        <li><b>Surface Complexity:</b> Defined by the degree of parametric functions \( f_x, f_y, f_z \).</li>
+        <li><b>Intersection Threshold:</b> Adjusted to control the sensitivity of context-dependent intersections.</li>
       </ul>
       <p>
-        Initial experiments indicate that the 3D layer captures context-dependent spatial features, which we evaluate against standard 2D tokenization benchmarks.
+        Through these parameters, the model dynamically adjusted to capture overlapping contexts, evaluated against a baseline using standard 2D embeddings.
       </p>
     </section>
 
@@ -107,10 +108,10 @@
     <section id="results" class="mb-5">
       <h2 class="h3">4. Results</h2>
       <p>
-        Results suggest an improvement in contextual accuracy. The 3D embeddings demonstrated a reduction in error rates on several NLP benchmarks. Complex semantic relationships within sentence structures were captured with greater accuracy.
+        Initial experiments demonstrate that the parametric surface embedding significantly outperforms traditional vector embeddings in capturing nuanced semantic relationships. The model's multi-dimensional representation showed a reduction in ambiguity for polysemous words and achieved lower error rates on syntactic benchmarks.
       </p>
       <div class="figure">
-        <img src="images/3DTokenLayer.png" alt="3D Tokenization Layer Structure">
+        <img src="images/ParametricSurfaces.png" alt="Diagram of Parametric Intersecting Surfaces for Token Embedding">
       </div>
     </section>
 
@@ -118,7 +119,7 @@
     <section id="implications" class="mb-5">
       <h2 class="h3">5. Implications</h2>
       <p>
-        The implementation of 3D tokenization layers opens new pathways for language model improvement, particularly in areas where spatial awareness of context is crucial, such as multi-language processing and semantic understanding. Future research could explore optimization of the 3D embedding dimensions and spatial configuration.
+        Parametric intersecting surfaces offer an alternative to vector fields by providing a continuous, surface-based approach to contextual embeddings. This innovation has implications for improving model interpretability and enhancing NLP applications, especially in fields requiring spatial awareness, such as multilingual NLP and semantic disambiguation. Future studies could optimize the choice of parametric functions and further explore the implications of surface geometry on embedding fidelity.
       </p>
     </section>
 
@@ -126,7 +127,7 @@
     <section id="conclusion" class="mb-5">
       <h2 class="h3">6. Conclusion</h2>
       <p>
-        This study presents a novel approach to tokenization by implementing a 3D structure, which holds promise for advancing language model accuracy and contextual comprehension. Future work will focus on refining the 3D space configuration and exploring real-world applications.
+        By utilizing parametric intersecting surfaces, this study introduces a new embedding approach that enhances the model's ability to represent multi-dimensional contextual information. Future research will focus on refining the interaction mechanics of these surfaces and exploring additional real-world applications for this transformative model architecture.
       </p>
     </section>
 

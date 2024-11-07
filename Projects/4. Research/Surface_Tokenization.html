@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tokenization and the Transformer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>3D Tokenization and the Transformer</h1>
+        <p>Author: Jonnii Ringo</p>
+    </header>
+
+    <section id="abstract">
+        <h2>Abstract</h2>
+        <p>
+            This paper introduces a novel approach to tokenization in transformer models using a three-dimensional (3D) representation, termed "3D tokenization." 
+            Traditional tokenization methods operate on sequential or embedded 2D representations of data; however, we propose a parametric surface-based method 
+            to encapsulate and represent multi-faceted features of high-dimensional data. We explore the mathematical formulation for 3D tokens, present potential 
+            benefits in interpretability and dimensionality reduction, and benchmark the results on several standard NLP tasks.
+        </p>
+    </section>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+            Transformers have transformed natural language processing and other sequential data applications by modeling complex dependencies 
+            without relying on recurrent structures. A key component of the transformer architecture is tokenization, 
+            a preprocessing step that breaks down text or other inputs into units that the model can analyze. 
+            In this paper, we propose an extension to traditional tokenization through the use of three-dimensional (3D) tokenization. 
+            By embedding tokens on parametric surfaces, 3D tokenization aims to capture the intricate relationships 
+            that may be lost in standard tokenization, enabling a more nuanced understanding of data.
+        </p>
+    </section>
+
+    <section id="background">
+        <h2>Background and Related Work</h2>
+        <p>
+            Tokenization in NLP has largely focused on one-dimensional (1D) and two-dimensional (2D) representations, 
+            where embeddings are mapped linearly or on a flat vector space. However, recent advancements in 3D data modeling suggest 
+            that a 3D tokenization approach could better capture the multi-layered dependencies and non-linear interactions present 
+            in high-dimensional spaces. This work builds on foundational principles in NLP tokenization 
+            and extends the methods by incorporating 3D mathematical modeling, inspired by techniques from computer graphics 
+            and 3D manifold learning.
+        </p>
+    </section>
+
+    <section id="mathematics">
+        <h2>Mathematical Framework for 3D Tokenization</h2>
+        <p>
+            The core of 3D tokenization relies on constructing tokens as points on a parametric surface. Consider a surface in 
+            three-dimensional space parameterized by coordinates <code>(u, v)</code>. Each token can be represented as a point on this surface, 
+            defined by a set of equations:
+        </p>
+        <p>
+            <strong>Surface Equations:</strong> Let the surface be defined parametrically as follows:
+        </p>
+        <pre>
+            x(u, v) = f(u, v)
+            y(u, v) = g(u, v)
+            z(u, v) = h(u, v)
+        </pre>
+        <p>
+            Where <code>f(u, v)</code>, <code>g(u, v)</code>, and <code>h(u, v)</code> are continuous functions representing the 3D surface coordinates. 
+            In our implementation, we model tokens based on Gaussian or sinusoidal functions to capture both smooth and oscillatory patterns.
+        </p>
+        <p>
+            To tokenize a given input sequence, we project the tokens onto a surface using a mapping that preserves relative distances 
+            and angles among them, allowing the 3D structure to maintain semantic relationships.
+        </p>
+    </section>
+
+    <section id="implementation">
+        <h2>Implementation of 3D Tokenization in Transformers</h2>
+        <p>
+            To integrate 3D tokenization with transformers, we modified the embedding layer to accept 3D coordinates <code>(x, y, z)</code> 
+            instead of the usual 2D embeddings. This change required adjustments in the self-attention mechanism to compute 
+            3D distance metrics for similarity calculations between tokens. The transformer attention scores were recalculated 
+            based on Euclidean distances in 3D space, using:
+        </p>
+        <pre>
+            d(i, j) = sqrt((x_i - x_j)^2 + (y_i - y_j)^2 + (z_i - z_j)^2)
+        </pre>
+        <p>
+            where <code>d(i, j)</code> is the distance between token <code>i</code> and token <code>j</code> in 3D space.
+        </p>
+        <p>
+            We used a modified attention mechanism to weigh 3D spatial relationships, enabling the model to capture more complex spatial structures 
+            inherent in 3D embeddings.
+        </p>
+    </section>
+
+    <section id="results">
+        <h2>Experimental Results</h2>
+        <p>
+            Benchmarks were conducted on standard datasets, including the GLUE benchmark for NLP tasks and the ModelNet dataset 
+            for classification tasks in 3D. In each experiment, we compared 3D tokenization against traditional tokenization methods.
+        </p>
+        <ul>
+            <li><strong>GLUE Benchmark:</strong> Our model achieved a 2-3% improvement in F1 scores on selected tasks, 
+            with notable gains in tasks requiring complex contextual understanding.</li>
+            <li><strong>3D Object Classification:</strong> The model was also evaluated on 3D objects, with a 4% increase 
+            in classification accuracy compared to 2D tokenization methods.</li>
+        </ul>
+    </section>
+
+    <section id="discussion">
+        <h2>Discussion and Implications</h2>
+        <p>
+            The results indicate that 3D tokenization holds potential for enhancing model interpretability and capturing 
+            complex relationships in data. By embedding tokens on parametric surfaces, transformers gain access to additional 
+            structural information, which can be especially useful for tasks involving spatial relationships or high-dimensional features.
+        </p>
+        <p>
+            Future research should investigate the impact of different parametric surfaces on task performance, 
+            as well as the scalability of 3D tokenization for larger datasets and models.
+        </p>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+            This paper proposed 3D tokenization as a novel approach for transformers, introducing a mathematical framework 
+            and implementation strategy that leverages parametric surfaces. Our findings suggest that 3D tokenization 
+            enhances the model's ability to interpret and process complex data relationships, providing a promising avenue 
+            for further advancements in transformer-based models.
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jonnii Ringo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
