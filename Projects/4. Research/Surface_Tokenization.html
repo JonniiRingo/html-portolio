@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Tokenization and the Transformer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"> <!-- Link to your custom CSS -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Scientific Paper on Quantum Field Desynchronization</title>
 </head>
+
 <body>
-    <header>
-        <h1>3D Tokenization and the Transformer</h1>
-        <p>Author: Jonnii Ringo</p>
-    </header>
 
-    <section id="abstract">
-        <h2>Abstract</h2>
-        <p>
-            This paper introduces a novel approach to tokenization in transformer models using a three-dimensional (3D) representation, termed "3D tokenization." 
-            Traditional tokenization methods operate on sequential or embedded 2D representations of data; however, we propose a parametric surface-based method 
-            to encapsulate and represent multi-faceted features of high-dimensional data. We explore the mathematical formulation for 3D tokens, present potential 
-            benefits in interpretability and dimensionality reduction, and benchmark the results on several standard NLP tasks.
-        </p>
+  <div class="container my-5">
+    <!-- Title Page -->
+    <section id="title-page" class="text-center mb-5">
+      <h1 class="display-4">Exploring Quantum Field Desynchronization</h1>
+      <h2>Insights for Warp Field Propulsion</h2>
+      <p class="lead">Jonathan Samuels</p>
+      <p class="lead">El Camino College</p>
+      <p class="lead">June 29, 2024</p>
     </section>
 
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>
-            Transformers have transformed natural language processing and other sequential data applications by modeling complex dependencies 
-            without relying on recurrent structures. A key component of the transformer architecture is tokenization, 
-            a preprocessing step that breaks down text or other inputs into units that the model can analyze. 
-            In this paper, we propose an extension to traditional tokenization through the use of three-dimensional (3D) tokenization. 
-            By embedding tokens on parametric surfaces, 3D tokenization aims to capture the intricate relationships 
-            that may be lost in standard tokenization, enabling a more nuanced understanding of data.
-        </p>
+    <!-- Abstract -->
+    <section id="abstract" class="mb-5">
+      <h2 class="h3">Abstract</h2>
+      <p>
+        This study delves into quantum field desynchronization, exploring its role in field propagation and its application in hypothetical propulsion systems. Through computational simulations and analytical methods, we investigate the field dynamics, leading to novel insights for high-energy physics applications. The results hold significant implications for non-linear wave structures and advanced propulsion concepts based on the Alcubierre warp drive.
+      </p>
     </section>
 
-    <section id="background">
-        <h2>Background and Related Work</h2>
-        <p>
-            Tokenization in NLP has largely focused on one-dimensional (1D) and two-dimensional (2D) representations, 
-            where embeddings are mapped linearly or on a flat vector space. However, recent advancements in 3D data modeling suggest 
-            that a 3D tokenization approach could better capture the multi-layered dependencies and non-linear interactions present 
-            in high-dimensional spaces. This work builds on foundational principles in NLP tokenization 
-            and extends the methods by incorporating 3D mathematical modeling, inspired by techniques from computer graphics 
-            and 3D manifold learning.
-        </p>
+    <!-- Table of Contents -->
+    <section id="table-of-contents" class="mb-5">
+      <h2 class="h3">Table of Contents</h2>
+      <ul>
+        <li><a href="#introduction">1. Introduction</a></li>
+        <li><a href="#theoretical-framework">2. Theoretical Framework</a></li>
+        <li><a href="#methods">3. Methods</a></li>
+        <li><a href="#results">4. Results</a></li>
+        <li><a href="#analysis">5. Analysis</a></li>
+        <li><a href="#implications">6. Implications</a></li>
+        <li><a href="#conclusion">7. Conclusion</a></li>
+        <li><a href="#references">8. References</a></li>
+      </ul>
     </section>
 
-    <section id="mathematics">
-        <h2>Mathematical Framework for 3D Tokenization</h2>
-        <p>
-            The core of 3D tokenization relies on constructing tokens as points on a parametric surface. Consider a surface in 
-            three-dimensional space parameterized by coordinates <code>(u, v)</code>. Each token can be represented as a point on this surface, 
-            defined by a set of equations:
-        </p>
-        <p>
-            <strong>Surface Equations:</strong> Let the surface be defined parametrically as follows:
-        </p>
-        <pre>
-            x(u, v) = f(u, v)
-            y(u, v) = g(u, v)
-            z(u, v) = h(u, v)
-        </pre>
-        <p>
-            Where <code>f(u, v)</code>, <code>g(u, v)</code>, and <code>h(u, v)</code> are continuous functions representing the 3D surface coordinates. 
-            In our implementation, we model tokens based on Gaussian or sinusoidal functions to capture both smooth and oscillatory patterns.
-        </p>
-        <p>
-            To tokenize a given input sequence, we project the tokens onto a surface using a mapping that preserves relative distances 
-            and angles among them, allowing the 3D structure to maintain semantic relationships.
-        </p>
+    <!-- Introduction -->
+    <section id="introduction" class="mb-5">
+      <h2 class="h3">1. Introduction</h2>
+      <p>
+        Quantum field theory (QFT) provides a framework for particle interactions and force behaviors at quantum scales. This study aims to model quantum field desynchronization and its implications for advanced propulsion. The desynchronization concept is explored through computational models, potentially advancing high-energy applications.
+      </p>
     </section>
 
-    <section id="implementation">
-        <h2>Implementation of 3D Tokenization in Transformers</h2>
-        <p>
-            To integrate 3D tokenization with transformers, we modified the embedding layer to accept 3D coordinates <code>(x, y, z)</code> 
-            instead of the usual 2D embeddings. This change required adjustments in the self-attention mechanism to compute 
-            3D distance metrics for similarity calculations between tokens. The transformer attention scores were recalculated 
-            based on Euclidean distances in 3D space, using:
-        </p>
-        <pre>
-            d(i, j) = sqrt((x_i - x_j)^2 + (y_i - y_j)^2 + (z_i - z_j)^2)
-        </pre>
-        <p>
-            where <code>d(i, j)</code> is the distance between token <code>i</code> and token <code>j</code> in 3D space.
-        </p>
-        <p>
-            We used a modified attention mechanism to weigh 3D spatial relationships, enabling the model to capture more complex spatial structures 
-            inherent in 3D embeddings.
-        </p>
+    <!-- Theoretical Framework -->
+    <section id="theoretical-framework" class="mb-5">
+      <h2 class="h3">2. Theoretical Framework</h2>
+      <h5>Quantum Field Equations</h5>
+      <p>The scalar quantum field ϕ follows the Klein-Gordon equation:</p>
+      <p>\[\Box \phi + m^2 \phi = 0\]</p>
+      <p>where □ denotes the d'Alembertian operator. For a massless field, this reduces to:</p>
+      <p>\[\Box \phi = 0\]</p>
+
+      <h5>Stress-Energy Tensor</h5>
+      <p>The stress-energy tensor \(T_{\mu\nu}\) is given by:</p>
+      <p>\[T_{\mu\nu} = \partial_\mu \phi \partial_\nu \phi - \frac{1}{2} g_{\mu\nu} (\partial_\lambda \phi \partial^\lambda \phi + m^2 \phi^2)\]</p>
+      <p>For a massless field, this simplifies to:</p>
+      <p>\[T_{\mu\nu} = \partial_\mu \phi \partial_\nu \phi - \frac{1}{2} g_{\mu\nu} \partial_\lambda \phi \partial^\lambda \phi\]</p>
     </section>
 
-    <section id="results">
-        <h2>Experimental Results</h2>
-        <p>
-            Benchmarks were conducted on standard datasets, including the GLUE benchmark for NLP tasks and the ModelNet dataset 
-            for classification tasks in 3D. In each experiment, we compared 3D tokenization against traditional tokenization methods.
-        </p>
-        <ul>
-            <li><strong>GLUE Benchmark:</strong> Our model achieved a 2-3% improvement in F1 scores on selected tasks, 
-            with notable gains in tasks requiring complex contextual understanding.</li>
-            <li><strong>3D Object Classification:</strong> The model was also evaluated on 3D objects, with a 4% increase 
-            in classification accuracy compared to 2D tokenization methods.</li>
-        </ul>
+    <!-- Methods -->
+    <section id="methods" class="mb-5">
+      <h2 class="h3">3. Methods</h2>
+      <h5>Simulation Setup</h5>
+      <p>
+        Numerical simulations were conducted on a discretized grid to solve the Klein-Gordon equation, with high magnetic field influences included as potential terms. Parameters like grid size, time steps, and spatial intervals were optimized for stability.
+      </p>
     </section>
 
-    <section id="discussion">
-        <h2>Discussion and Implications</h2>
-        <p>
-            The results indicate that 3D tokenization holds potential for enhancing model interpretability and capturing 
-            complex relationships in data. By embedding tokens on parametric surfaces, transformers gain access to additional 
-            structural information, which can be especially useful for tasks involving spatial relationships or high-dimensional features.
-        </p>
-        <p>
-            Future research should investigate the impact of different parametric surfaces on task performance, 
-            as well as the scalability of 3D tokenization for larger datasets and models.
-        </p>
+    <!-- Results -->
+    <section id="results" class="mb-5">
+      <h2 class="h3">4. Results</h2>
+      <h5>Field Propagation</h5>
+      <p>The field \(\phi\) displayed wave propagation and interference patterns over time, forming soliton-like structures and intricate energy densities.</p>
+
+      <h5>Stress-Energy Tensor Analysis</h5>
+      <p>The energy density \((T_{tt})\) corresponded to observed wave interactions, supporting theoretical predictions about field desynchronization under high-energy conditions.</p>
+      <div class="figure1">
+        <img src="images/DesyncMetric.png" alt="Simulation of Desync wave propagation">
+      </div>
     </section>
 
-    <section id="conclusion">
-        <h2>Conclusion</h2>
-        <p>
-            This paper proposed 3D tokenization as a novel approach for transformers, introducing a mathematical framework 
-            and implementation strategy that leverages parametric surfaces. Our findings suggest that 3D tokenization 
-            enhances the model's ability to interpret and process complex data relationships, providing a promising avenue 
-            for further advancements in transformer-based models.
-        </p>
+    <!-- Analysis -->
+    <section id="analysis" class="mb-5">
+      <h2 class="h3">5. Analysis</h2>
+      <h5>Energy Conditions</h5>
+      <p>
+        We verified the weak and dominant energy conditions, ensuring the shaping function’s consistency with general relativity principles.
+      </p>
+
+      <h5>Field Interactions</h5>
+      <p>Simulations were performed to assess constructive and destructive interferences, determining optimal configurations for field geometry.</p>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Jonnii Ringo. All rights reserved.</p>
-    </footer>
+    <!-- Implications -->
+    <section id="implications" class="mb-5">
+      <h2 class="h3">6. Implications</h2>
+      <p>
+        This research suggests that manipulating wave propagation in high-energy quantum fields may provide insights into warp field propulsion. While theoretical, the potential to control localized space-time distortions could lead to advancements in non-linear field applications.
+      </p>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="mb-5">
+      <h2 class="h3">7. Conclusion</h2>
+      <p>
+        Quantum field desynchronization offers a promising area for further investigation, especially for propulsion physics. The computational results indicate a theoretical foundation for localized field manipulation, warranting more in-depth exploration.
+      </p>
+    </section>
+
+    <!-- References -->
+    <section id="references" class="mb-5">
+      <h2 class="h3">8. References</h2>
+      <ul>
+        <li>Alcubierre, M. (1994). The warp drive: hyper-fast travel within general relativity. Classical and Quantum Gravity, 11(5), L73–L77.</li>
+        <li>Peskin, M. E., & Schroeder, D. V. (1995). An Introduction to Quantum Field Theory. Addison-Wesley.</li>
+      </ul>
+    </section>
+
+  </div>
+
 </body>
 </html>
