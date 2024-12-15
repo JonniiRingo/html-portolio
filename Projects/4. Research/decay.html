@@ -1,94 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Controlling Decay in Heavy Elements: A Mathematical and Scientific Analysis</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Controlling Decay in Heavy Elements: A Mathematical and Scientific Analysis</title>
+
+  <style>
+  
+    .figure {
+      display: flex;
+      justify-content: center;
+    }
+    .figure img {
+      width: 75%;
+      height: auto;
+    }
+
+  </style>
+
 </head>
+
 <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <!-- Header Section -->
-        <header>
-            <div class="header-content">
-                <h1>Controlling Decay in Heavy Elements: A Mathematical and Scientific Analysis</h1>
-                <p>By: Jonnii Ringo</p>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <main>
-            <section class="intro">
-                <p>Understanding the decay process of heavy elements, particularly the isotopes of Moscovium (element 115), is crucial for developing a deeper understanding of nuclear physics and potential applications in controlled nuclear reactions. This paper aims to explore the various factors influencing nuclear decay, with a focus on controlling the decay process using particle beams, resonance states, and energy barriers. The goal is to understand whether it is possible to manipulate the decay process to delay or control it, potentially enabling the creation of controlled bursts of energy.</p>
-            </section>
-
-            <section class="resonance">
-                <h2>Resonance States and Particle Beams</h2>
-                <p>When particle beams, such as protons or electrons, interact with a nucleus, they can impart energy to it, exciting it to higher energy states, known as resonance states. These states are temporary and can decay back to the ground state, often emitting particles or radiation in the process. By precisely controlling the energy of the particle beam, we can potentially excite the nucleus to a specific resonance state, which could alter its decay pathways.</p>
-                <p>Mathematically, this process can be analyzed using the principles of quantum mechanics. The resonant frequency for a particle or nucleus can be described by the Schrödinger equation, similar to how the natural frequencies of a system (e.g., a flute) are determined by its intrinsic properties.</p>
-                <div class="equation">
-                    <p>$$ \hat{H} \Psi = E \Psi $$</p>
-                    <p>where \( \hat{H} \) is the Hamiltonian operator, \( \Psi \) is the wave function, and \( E \) is the energy eigenvalue.</p>
-                </div>
-            </section>
-
-            <section class="energy-barriers">
-                <h2>Up-Hill Reactions and Energy Barriers</h2>
-                <p>Nuclear decay typically occurs when the nucleus transitions from a higher energy state to a lower one, releasing energy. However, if a nucleus reaches a state where further decay would require additional energy (an uphill reaction), the decay process can be halted. This is analogous to rolling a ball uphill: once the ball reaches a peak, it won't continue unless pushed further.</p>
-                <p>Energy barriers in nuclear decay can be described using potential energy curves, where certain configurations of protons and neutrons are energetically unfavorable. This can be mathematically expressed using the potential energy function \( V(r) \), where \( r \) is the distance between nucleons.</p>
-                <div class="equation">
-                    <p>$$ V(r) = -\frac{Z_1 Z_2 e^2}{r} + V_{\text{nuclear}}(r) $$</p>
-                    <p>where \( Z_1 \) and \( Z_2 \) are the atomic numbers of the interacting nuclei, \( e \) is the elementary charge, and \( V_{\text{nuclear}} \) represents the nuclear potential.</p>
-                </div>
-            </section>
-
-            <section class="metastable-states">
-                <h2>Metastable States</h2>
-                <p>Metastable states are excited states of a nucleus that have relatively long lifetimes compared to other excited states. These states can exist because the nucleus is in a local energy minimum, making immediate decay less probable. Particle beams can induce decay from these metastable states by providing the necessary energy to overcome the energy barrier, causing the nucleus to transition to a lower energy state.</p>
-                <p>Metastable states can be mathematically represented by a potential well with a finite depth. The probability of decay from a metastable state can be calculated using quantum tunneling models, where the decay rate \( \Gamma \) is related to the barrier penetration probability.</p>
-                <div class="equation">
-                    <p>$$ \Gamma = \frac{2 \pi}{\hbar} \left| \langle f | \hat{H}' | i \rangle \right|^2 \rho(E_f) $$</p>
-                    <p>where \( \hbar \) is the reduced Planck's constant, \( \langle f | \hat{H}' | i \rangle \) is the matrix element of the perturbation Hamiltonian \( \hat{H}' \), and \( \rho(E_f) \) is the density of final states at energy \( E_f \).</p>
-                </div>
-            </section>
-
-            <section class="postponing-decay">
-                <h2>Postponing Decay with Particle Beams</h2>
-                <p>The idea of using particle beams to both induce and postpone decay is intriguing. If a particle beam can excite a nucleus to a metastable state, it might also be possible to maintain the nucleus in that state by continuously providing energy, effectively postponing its decay. This would require precise control over the energy and timing of the particle beam to keep the nucleus in the metastable state.</p>
-                <p>To analyze this mathematically, consider the energy levels of a nucleus and the transitions between them. The probability of a transition from state \( i \) to state \( f \) can be described using quantum mechanics, specifically Fermi's Golden Rule:</p>
-                <div class="equation">
-                    <p>$$ \Gamma_{i \to f} = \frac{2 \pi}{\hbar} \left| \langle f | \hat{H}' | i \rangle \right|^2 \rho(E_f) $$</p>
-                    <p>where \( \Gamma_{i \to f} \) is the transition rate, \( \hbar \) is the reduced Planck's constant, \( \langle f | \hat{H}' | i \rangle \) is the matrix element of the perturbation Hamiltonian \( \hat{H}' \), and \( \rho(E_f) \) is the density of final states at energy \( E_f \).</p>
-                </div>
-                <p>For particle beams, the interaction can be modeled as a perturbation \( \hat{H}' \) to the nucleus. By tuning the energy of the particle beam, we can manipulate \( \langle f | \hat{H}' | i \rangle \) to either induce or inhibit specific transitions.</p>
-            </section>
-
-            <section class="conclusion">
-                <h2>Conclusion</h2>
-                <p>It is possible if:</p>
-                <ul>
-                    <li>We can precisely control the energy of the particle beam to excite the nucleus to a specific resonance state.</li>
-                    <li>We understand the energy barriers and metastable states of the nucleus well enough to manipulate its decay pathways.</li>
-                    <li>We can continuously provide the right amount of energy to maintain a metastable state, effectively postponing decay.</li>
-                </ul>
-                <p>This approach requires advanced knowledge of nuclear physics and precise control over experimental conditions. If achieved, it could open up new possibilities for controlled nuclear reactions and applications in propulsion systems.</p>
-            </section>
-
-            <section class="references">
-                <h2>References and Further Reading</h2>
-                <ul>
-                    <li>"Nuclear Resonances, Scattering and Reactions from First Principles: Progress and Prospects" by Sofia Quaglioni and Petr Navratil (<a href="https://arxiv.org/">arXiv</a>).</li>
-                    <li>Quanta Magazine's article on the role of resonance in particle physics and quantum mechanics (<a href="https://www.quantamagazine.org/">Quanta Magazine</a>).</li>
-                </ul>
-            </section>
-        </main>
-        
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2024 Jonnii Ringo. All rights reserved.</p>
-        </footer>
+      <a class="navbar-brand" href="#">Jonathan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div class="container my-5">
+    <!-- Title Page -->
+    <section id="title-page" class="text-center mb-5">
+      <h1 class="display-4">Controlling Decay in Heavy Elements: A Mathematical and Scientific Analysis</h1>
+      <p class="lead">Jonathan Samuels</p>
+      <p class="lead">El Camino College</p>
+      <p class="lead">November 2024</p>
+    </section>
+
+    <!-- Abstract -->
+    <section id="abstract" class="mb-5">
+      <h2 class="h3">Abstract</h2>
+      <p>
+        Understanding the decay process of heavy elements, particularly the isotopes of Moscovium (element 115), is crucial for developing a deeper understanding of nuclear physics and potential applications in controlled nuclear reactions. This paper aims to explore the various factors influencing nuclear decay, with a focus on controlling the decay process using particle beams, resonance states, and energy barriers. The goal is to understand whether it is possible to manipulate the decay process to delay or control it, potentially enabling the creation of controlled bursts of energy.
+      </p>
+
+    </section>
+
+    <!-- Table of Contents -->
+    <section id="table-of-contents" class="mb-5">
+      <h2 class="h3">Table of Contents</h2>
+      <ul>
+        <li><a href="#Resonance States and Particle Beams">1. Resonance States and Particle Beams</a></li>
+        <li><a href="#Up-Hill Reactions and Energy Barriers">2. Up-Hill Reactions and Energy Barriers</a></li>
+        <li><a href="#Metastable States">3. Metastable States</a></li>
+        <li><a href="#Postponing Decay with Particle Beams">4. Postponing Decay with Particle Beams</a></li>
+        <li><a href="#conclusion">6. Conclusion</a></li>
+        <li><a href="#references">7. References</a></li>
+      </ul>
+    </section>
+
+    <!-- Postponing Decay with Particle Beams< -->
+    <section id="Resonance States and Particle Beams" class="mb-5">
+      <h2 class="h3">1. Resonance States and Particle Beams</h2>
+      <p>
+        Language models have traditionally relied on vector-based embeddings for capturing semantic and syntactic relationships. This paper explores an innovative departure from this paradigm, proposing the use of parametric intersecting surfaces as the foundational structure for embeddings within transformer architectures. We hypothesize that this approach enhances the model's ability to capture complex, multidimensional relationships by treating each token embedding as a surface intersection in a multi-dimensional space.
+      </p>
+    </section>
+
+    <!-- Uphill Reactions and Energy Barriers -->
+    <section id="Up-Hill Reactions and Energy Barriers" class="mb-5">
+      <h2 class="h3">2. Up-Hill Reactions and Energy Barriers</h2>
+      <p>Nuclear decay typically occurs when the nucleus transitions from a higher energy state to a lower one, releasing energy. However, if a nucleus reaches a state where further decay would require additional energy (an uphill reaction), the decay process can be halted. This is analogous to rolling a ball uphill: once the ball reaches a peak, it won't continue unless pushed further.</p>
+      <p>Energy barriers in nuclear decay can be described using potential energy curves, where certain configurations of protons and neutrons are energetically unfavorable. This can be mathematically expressed using the potential energy function \( V(r) \), where \( r \) is the distance between nucleons.</p>
+      <div class="equation">
+          <p>$$ V(r) = -\frac{Z_1 Z_2 e^2}{r} + V_{\text{nuclear}}(r) $$</p>
+          <p>where \( Z_1 \) and \( Z_2 \) are the atomic numbers of the interacting nuclei, \( e \) is the elementary charge, and \( V_{\text{nuclear}} \) represents the nuclear potential.</p>
+    </section>
+
+    <!-- Methods -->
+    <section id="Metastable States" class="mb-5">
+      <h2 class="h3">3. Metastable States</h2>
+      <p>Metastable states are excited states of a nucleus that have relatively long lifetimes compared to other excited states. These states can exist because the nucleus is in a local energy minimum, making immediate decay less probable. Particle beams can induce decay from these metastable states by providing the necessary energy to overcome the energy barrier, causing the nucleus to transition to a lower energy state.</p>
+      <p>Metastable states can be mathematically represented by a potential well with a finite depth. The probability of decay from a metastable state can be calculated using quantum tunneling models, where the decay rate \( \Gamma \) is related to the barrier penetration probability.</p>
+      <div class="equation">
+          <p>$$ \Gamma = \frac{2 \pi}{\hbar} \left| \langle f | \hat{H}' | i \rangle \right|^2 \rho(E_f) $$</p>
+          <p>where \( \hbar \) is the reduced Planck's constant, \( \langle f | \hat{H}' | i \rangle \) is the matrix element of the perturbation Hamiltonian \( \hat{H}' \), and \( \rho(E_f) \) is the density of final states at energy \( E_f \).</p>
+    </section>
+
+    <!-- Results -->
+    <section id="Postponing Decay with Particle Beams" class="mb-5">
+      <h2 class="h3">4. Postponing Decay with Particle Beams</h2>
+      <p>To analyze this mathematically, consider the energy levels of a nucleus and the transitions between them. The probability of a transition from state \( i \) to state \( f \) can be described using quantum mechanics, specifically Fermi's Golden Rule:</p>
+      <div class="equation">
+          <p>$$ \Gamma_{i \to f} = \frac{2 \pi}{\hbar} \left| \langle f | \hat{H}' | i \rangle \right|^2 \rho(E_f) $$</p>
+          <p>where \( \Gamma_{i \to f} \) is the transition rate, \( \hbar \) is the reduced Planck's constant, \( \langle f | \hat{H}' | i \rangle \) is the matrix element of the perturbation Hamiltonian \( \hat{H}' \), and \( \rho(E_f) \) is the density of final states at energy \( E_f \).</p>
+      </div>
+      <p>For particle beams, the interaction can be modeled as a perturbation \( \hat{H}' \) to the nucleus. By tuning the energy of the particle beam, we can manipulate \( \langle f | \hat{H}' | i \rangle \) to either induce or inhibit specific transitions.</p>
+    </section>
+
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="mb-5">
+      <h2 class="h3">5. Conclusion</h2>
+      <p>It is possible if:</p>
+      <ul>
+          <li>We can precisely control the energy of the particle beam to excite the nucleus to a specific resonance state.</li>
+          <li>We understand the energy barriers and metastable states of the nucleus well enough to manipulate its decay pathways.</li>
+          <li>We can continuously provide the right amount of energy to maintain a metastable state, effectively postponing decay.</li>
+      </ul>
+      <p>This approach requires advanced knowledge of nuclear physics and precise control over experimental conditions. If achieved, it could open up new possibilities for controlled nuclear reactions and applications in propulsion systems.</p>
+    </section>
+
+    <!-- References -->
+    <section id="references" class="mb-5">
+      <h2 class="h3">6. References</h2>
+      <ul>
+        <li>"Nuclear Resonances, Scattering and Reactions from First Principles: Progress and Prospects" by Sofia Quaglioni and Petr Navratil (<a href="https://arxiv.org/">arXiv</a>).</li>
+        <li>Quanta Magazine's article on the role of resonance in particle physics and quantum mechanics (<a href="https://www.quantamagazine.org/">Quanta Magazine</a>).</li>
+    </ul>
+    </section>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
