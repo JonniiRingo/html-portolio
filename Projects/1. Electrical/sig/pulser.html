@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your custom CSS -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+
+    .figure1 img
+        {
+            width: 100%;
+            height: auto;
+        }
+
+    .canvas-container {
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+
+
+    
+    #canvas3d {
+      width: 100%;
+      height: 100%;
+    }
+
+    .write-up {
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      z-index: 2;
+      background-image: url(https://app.spline.design/_assets/_icons/icon_favicon32x32.png);
+      background-size: cover;
+    }
+
+    .logo:hover {
+      opacity: 0.8;
+    }
+
+    body {
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Jonathan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../ElectricalHome.html">Electrical Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div>
+    <ul>
+    <!-- Methods -->
+        <section id="header" class="mb-5">
+            <h2 class="h3">Miniature Pulse Generator – DCX Chol Prototype</h2>
+            <p>
+                <h5>Designed for low-latency pulse generation and logic inversion using discrete analog components
+                </h5>
+            </p>
+            <hr>
+
+            <p>
+                While working at DCX Chol, I developed a compact pulse generator for internal testing of electromechanical harness assemblies. The device was built using a 555 timer IC in monostable (one-shot) mode to emit sharply timed pulses, paired with a discrete dual-MOSFET inverter circuit to control signal polarity for load-agnostic testing scenarios.
+            </p>
+
+            <hr>
+            <h6>Core Circuitry</h6>
+            <ul>
+                <li>555 timer configured in one-shot mode</li>
+                <li>djustable resistor-capacitor timing network</li>
+                <li>Single pulse triggered on rising-edge input</li>
+                <li>Output duration: tunable from 10 µs to 1 second</li>
+                <li>Logic Inversion Stage:</li>
+                <li>Two MOSFETs wired in series — one N-channel, one P-channel</li>
+                <li>Acts as a non-buffered logic inverter</li>
+                <li>Ensures clean signal flip with high switching speed and low propagation delay</li>
+                <li>Used to test the response of reverse-polarity tolerant inputs</li>
+            </ul>
+
+            <hr>
+            The initial conditions for the field \(\phi\) were set to represent a localized perturbation, and the field was evolved using a finite difference method.
+            <p>
+
+        </section>
+
+    </ul>
+</div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
