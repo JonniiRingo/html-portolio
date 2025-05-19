@@ -10,50 +10,14 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <style>
 
-    .figure1 img
-        {
-            width: 100%;
-            height: auto;
-        }
-
-    .canvas-container {
-      width: 100%;
-      max-width: 600px;
-      height: 400px;
-      margin: 20px auto;
-      border: 1px solid #ccc;
-    }
 
 
 
-    
-    #canvas3d {
-      width: 100%;
-      height: 100%;
-    }
 
-    .write-up {
-      padding: 20px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-      margin: 20px auto;
-      max-width: 600px;
-    }
 
-    .logo {
-      position: absolute;
-      bottom: 16px;
-      right: 16px;
-      width: 32px;
-      height: 32px;
-      z-index: 2;
-      background-image: url(https://app.spline.design/_assets/_icons/icon_favicon32x32.png);
-      background-size: cover;
-    }
 
-    .logo:hover {
-      opacity: 0.8;
-    }
+
+
 
     body {
       overflow: auto;
@@ -80,43 +44,67 @@
     </div>
   </nav>
 
+
+
+
+
+
+
+
+
+
+        <!-- </section> -->
+
 <div>
-    <ul>
-    <!-- Methods -->
-        <section id="header" class="mb-5">
-            <h2 class="h3">Miniature Pulse Generator – DCX Chol Prototype</h2>
-            <p>
-                <h5>Designed for low-latency pulse generation and logic inversion using discrete analog components
-                </h5>
-            </p>
-            <hr>
-
-            <p>
-                While working at DCX Chol, I developed a compact pulse generator for internal testing of electromechanical harness assemblies. The device was built using a 555 timer IC in monostable (one-shot) mode to emit sharply timed pulses, paired with a discrete dual-MOSFET inverter circuit to control signal polarity for load-agnostic testing scenarios.
-            </p>
-
-            <hr>
-            <h6>Core Circuitry</h6>
-            <ul>
-                <li>555 timer configured in one-shot mode</li>
-                <li>djustable resistor-capacitor timing network</li>
-                <li>Single pulse triggered on rising-edge input</li>
-                <li>Output duration: tunable from 10 µs to 1 second</li>
-                <li>Logic Inversion Stage:</li>
-                <li>Two MOSFETs wired in series — one N-channel, one P-channel</li>
-                <li>Acts as a non-buffered logic inverter</li>
-                <li>Ensures clean signal flip with high switching speed and low propagation delay</li>
-                <li>Used to test the response of reverse-polarity tolerant inputs</li>
-            </ul>
-
-            <hr>
-            The initial conditions for the field \(\phi\) were set to represent a localized perturbation, and the field was evolved using a finite difference method.
-            <p>
-
+    <div class="container my-5">
+        <section class="mb-5">
+          <h2 class="h3 text-center">Miniature Pulse Generator – DCX Chol Prototype</h2>
+          <h5 class="text-center">Designed for low-latency pulse generation and logic inversion using discrete analog components</h5>
+          <p>While working at DCX Chol, I developed a compact pulse generator...</p>
+          <ul>
+            <li>555 timer configured in one-shot mode</li>
+            <li>djustable resistor-capacitor timing network</li>
+            <li>Single pulse triggered on rising-edge input</li>
+            <li>Output duration: tunable from 10 µs to 1 second</li>
+            <li>Logic Inversion Stage:</li>
+            <li>Two MOSFETs wired in series — one N-channel, one P-channel</li>
+            <li>Acts as a non-buffered logic inverter</li>
+            <li>Ensures clean signal flip with high switching speed and low propagation delay</li>
+            <li>Used to test the response of reverse-polarity tolerant inputs</li>
+          </ul>
+          <div class="text-center">
+            <img src="images/pulse_gen.jpg" class="img-fluid" />
+          </div>
         </section>
-
-    </ul>
+      
+        <section class="mb-5">
+          <h2 class="h3">Output Stage</h2>
+          <ul>
+            <li>Clean, fast rise/fall edges suitable for triggering logic circuits</li>
+            <li>Output drive current: up to 100 mA (suitable for small load tests)</li>
+            <li>Signal available via screw terminals or test pins</li>
+          </ul>
+          <div class="text-center">
+            <img src="images/sigschem.png" class="img-fluid" />
+          </div>
+        </section>
+      
+        <section class="mb-5">
+          <h2 class="h3">Use Case at DCX Chol</h2>
+          <ul>
+            <li>Test digital line filtering, debounce, and EMI rejection in cable harnesses</li>
+            <li>Validate microcontroller interrupt inputs and external clock capture lines</li>
+            <li>Simulate power-on glitches and transient control signals during QA</li>
+          </ul>
+        </section>
+      
+        <section class="mb-5">
+          <h2 class="h3">Significance</h2>
+          <p>Despite its simplicity, the project emphasized fast prototyping, clean analog design, and logical signal flow control using no microcontrollers — a practical, field-ready tool in an analog-dominated QA workflow.</p>
+        </section>
+      </div>
 </div>
+
 
 
 
